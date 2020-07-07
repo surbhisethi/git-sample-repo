@@ -17,7 +17,6 @@ class LoginTests(unittest.TestCase):
         self.lp.login("test@email.com", "abcabc")
         result1 = self.lp.verifyTitle()
         self.ts.mark(result1, "Title is Incorrect...Please verify the Title")
-
         result2 = self.lp.verifyLoginSuccessful()
         self.ts.markFinal("test_validLogin", result2, "Login was not successful...Please Validate...")
 
@@ -26,21 +25,5 @@ class LoginTests(unittest.TestCase):
         self.lp.login("test@email.com", "abcabcabc**")
         result = self.lp.verifyLoginFailed()
         assert result == True
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$	
 **************************************************************
