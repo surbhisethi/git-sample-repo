@@ -19,3 +19,11 @@ class LoginTests(unittest.TestCase):
         self.ts.mark(result1, "Title is Incorrect...Please verify the Title")
         result2 = self.lp.verifyLoginSuccessful()
         self.ts.markFinal("test_validLogin", result2, "Login was not successful...Please Validate...")
+
+    @pytest.mark.run(order=1)
+    def test_invalidLogin(self):
+        self.lp.login("test@email.com", "abcabcabc**")
+        result = self.lp.verifyLoginFailed()
+        assert result == True
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$	
+**************************************************************
