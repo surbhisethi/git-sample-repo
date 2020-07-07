@@ -26,3 +26,21 @@ class LoginTests(unittest.TestCase):
         self.lp.login("test@email.com", "abcabcabc**")
         result = self.lp.verifyLoginFailed()
         assert result == True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$	
+**************************************************************
